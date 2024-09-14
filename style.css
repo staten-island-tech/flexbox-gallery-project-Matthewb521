@@ -1,30 +1,66 @@
 body,
 html,
 * {
-    font-size: 10px;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  font-size: 10px;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: aqua;
 }
 
-.card{
-    width: 30rem;
-    height: 35rem;
-    border: 2px round blue;
-    border-radius: 3px;
-    display: flex;
+html,
+body {
+  height: 100%;
+  background-image: url("Images/tech.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  margin: 0;
+  background-color: #000;
 }
 
-.card-header{
-    font-size: 2.2rem;
+.container {
+  display: flex;
+  width: 66%;
+  margin: 2.5rem auto;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 
-.card-image{
-    width: 60%;
-    height: 40%;
-    object-fit: cover;
+.card {
+  width: 25rem;
+  height: 30rem;
+  border: 2px solid azure;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  overflow: hidden;
+  background-image: url(Images/background.png);
 }
 
-.card-desc{
-    font-size: 1.5rem;
+.card-header {
+  font-size: 2.2rem;
+  background-color: transparent;
+}
+
+.images {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  flex-shrink: 0;
+  background-color: transparent;
+  box-shadow: none;
+  border: 3px double azure;
+}
+
+.card-desc {
+  font-size: 1.5rem;
+  padding: 1rem;
+  text-align: center;
+  background-color: transparent;
 }
