@@ -5,24 +5,32 @@ html,
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  color: aqua;
+  font-family: "Protest Guerrilla", sans-serif;
 }
 
 html,
 body {
-  height: 100%;
   background-image: url("Images/tech.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 100%;
+
   margin: 0;
   background-color: #000;
 }
 
+.page-head {
+  font-size: 5rem;
+  text-align: center;
+}
+
+.flash {
+  padding: 1rem;
+}
+
 .container {
   display: flex;
-  width: 66%;
+  width: 50%;
   margin: 2.5rem auto;
   flex-direction: row;
   align-items: center;
@@ -33,6 +41,8 @@ body {
 .card {
   width: 25rem;
   height: 30rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   border: 2px solid azure;
   border-radius: 3px;
   display: flex;
@@ -60,7 +70,7 @@ body {
 
 .card-desc {
   font-size: 1.5rem;
-  padding: 1rem;
+  padding: 0.5rem;
   text-align: center;
   background-color: transparent;
 }
