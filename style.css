@@ -24,16 +24,12 @@ body {
   text-align: center;
 }
 
-.flash {
-  padding: 1rem;
-}
-
 .container {
   display: flex;
   width: 50%;
   margin: 2.5rem auto;
   flex-direction: row;
-  align-items: center;
+  align-items: left;
   justify-content: space-evenly;
   flex-wrap: wrap;
 }
@@ -73,4 +69,25 @@ body {
   padding: 0.5rem;
   text-align: center;
   background-color: transparent;
+}
+
+.parent {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+}
+
+.flash {
+  display: flex;
+  width: 1%;
+  flex-direction: column;
+  align-items: flex-start;
+  align-items: right;
+  justify-content: space-between;
+}
+
+.card-hover-1:hover {
+  transform: scale(1.1);
+  color: red;
 }
