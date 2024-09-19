@@ -151,3 +151,30 @@ body {
 .image-ani-2:hover {
   animation: spamImages 0.2s infinite;
 }
+
+@media screen and (max-width: 1100px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card {
+    width: 80%;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card {
+    width: 50%;
+    height: auto;
+  }
+}
+
+.card-ani-7:hover {
+  background-image: url(Images/mew.png);
+  opacity: 0;
+}
