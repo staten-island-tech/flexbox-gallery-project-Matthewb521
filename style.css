@@ -113,7 +113,6 @@ body {
 .card-ani-5:hover {
   animation: wave 3s ease-in-out;
 }
-
 @keyframes wave {
   0%,
   100% {
@@ -137,4 +136,18 @@ body {
   height: 100%;
   background-image: url(Images/henriques.png);
   z-index: 1;
+}
+
+@keyframes spamImages {
+  0% {
+    opacity: 1;
+    transform: translate(0, 0) rotate(0deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(0, 0) rotate(360deg);
+  }
+}
+.image-ani-2:hover {
+  animation: spamImages 0.2s infinite;
 }
