@@ -14,7 +14,6 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-
   margin: 0;
   background-color: #000;
 }
@@ -35,10 +34,11 @@ body {
 }
 
 .card {
-  width: 26%;
+  width: 20%;
   height: 31%;
   margin-top: 1rem;
   margin-bottom: 1rem;
+  margin: 1rem;
   border: 2px solid azure;
   border-radius: 3px;
   display: flex;
@@ -87,6 +87,10 @@ body {
   align-items: flex-start;
   align-items: right;
   justify-content: space-between;
+}
+
+#flash-image {
+  animation: flashGlow 2s infinite;
 }
 
 .card-ani-1:hover {
@@ -154,16 +158,6 @@ body {
   animation: spamImages 0.2s infinite;
 }
 
-.image-ani-3:hover {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url(Images/flash);
-  z-index: 1;
-}
-
 .text-ani-1:hover {
   transform: scale(1.3);
   color: red;
@@ -195,5 +189,32 @@ body {
   .card {
     width: 50%;
     height: auto;
+  }
+}
+
+@keyframes flashGlow {
+  0% {
+    opacity: 1;
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0);
+  }
+  20% {
+    opacity: 1;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 1);
+  }
+  40% {
+    opacity: 1;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 1);
+  }
+  60% {
+    opacity: 1;
+    box-shadow: 0 0 20px rgba(0, 0, 255, 1);
+  }
+  80% {
+    opacity: 1;
+    box-shadow: 0 0 20px rgba(255, 255, 0, 1);
+  }
+  100% {
+    opacity: 1;
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0);
   }
 }
