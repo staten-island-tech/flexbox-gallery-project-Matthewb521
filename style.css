@@ -1,43 +1,42 @@
-body,
-html,
+/* Resetting default styles */
 * {
-  font-size: 10px;
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Protest Guerrilla", sans-serif;
+  box-sizing: border-box;
 }
 
-html,
-body {
+html {
+  font-size: 10px;
   background-image: url("Images/tech.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  margin: 0;
   background-color: #000;
 }
 
+body {
+  font-family: "Protest Guerrilla", sans-serif;
+}
+
+/* Headings */
 .page-head {
   font-size: 5rem;
   text-align: center;
 }
 
+/* Flex container for cards */
 .container {
   display: flex;
   width: 50%;
   margin: 2.5rem auto;
-  flex-direction: row;
-  align-items: left;
-  justify-content: space-evenly;
   flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
+/* Card styles */
 .card {
   width: 20%;
-  height: 31%;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  height: 30rem; /* Fixed height for all cards */
   margin: 1rem;
   border: 2px solid azure;
   border-radius: 3px;
@@ -45,93 +44,51 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  overflow: hidden;
+  overflow: hidden; /* Prevent overflow from content */
   background-image: url(Images/background.png);
   background-size: cover;
-  box-shadow: 5px 5px 15px 0 rgba(0, 0, 0, 0.5);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.5s ease;
 }
 
-.card-header {
-  font-size: 2.2rem;
-  background-color: transparent;
-}
-
-.images {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  flex-shrink: 0;
-  background-color: transparent;
-  box-shadow: none;
-  border: 3px double azure;
-}
-
-.card-desc {
-  font-size: 1.5rem;
-  padding: 0.5rem;
-  text-align: center;
-  background-color: transparent;
-}
-
-.parent {
-  width: 100%;
-  padding: 20px;
-  box-sizing: border-box;
-  display: flex;
-}
-
-.flash {
-  display: flex;
-  width: 1%;
-  flex-direction: column;
-  align-items: flex-start;
-  align-items: right;
-  justify-content: space-between;
-}
-
-#flash-image {
-  animation: flashGlow 2s infinite;
-}
-
+/* Card animations */
 .card-ani-1:hover {
   transform: scale(1.1);
   color: red;
 }
-.card-ani-1 {
-  transition: transform 0.3s ease, color 0.3s ease;
-}
 
 .card-ani-2:hover {
   transform: rotate(360deg);
-  transition: 2s ease;
+  transition: 2s ease; /* Ensuring transition is applied */
 }
 
 .card-ani-3:hover {
   box-shadow: 0 4px 20px blue;
-  transition: box-shadow 0.5s ease;
 }
 
 .card-ani-4:hover {
   border: 5rem solid transparent;
-  transition: border-color 0.7s ease;
+  transition: border-color 0.7s ease; /* Ensuring transition is applied */
 }
 
 .card-ani-5:hover {
-  animation: wave 3s ease-in-out;
-}
-@keyframes wave {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-100rem);
-  }
+  animation: wave 3s ease-in-out; /* Original hover animation */
 }
 
 .card-ani-6:hover {
   transform: rotateY(180deg);
-  transition: 1s ease;
+  transition: 1s ease; /* Ensuring transition is applied */
+}
+
+.card-ani-7:hover {
+  opacity: 0;
+}
+
+/* Image styles */
+.images {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensure images cover their container */
 }
 
 .image-ani:hover {
@@ -144,6 +101,97 @@ body {
   z-index: 1;
 }
 
+.image-ani-2:hover {
+  animation: spamImages 0.2s infinite; /* Original hover animation */
+}
+
+/* Text animations */
+.text-ani-1:hover {
+  transform: scale(1.3);
+  color: red;
+}
+
+.text-ani-1 {
+  transition: transform 0.3s ease, color 0.3s ease; /* Add transition for smoothness */
+}
+
+/* Flex alignment */
+.parent {
+  display: flex;
+  width: 100%;
+  padding: 20px;
+}
+
+.flash {
+  display: flex;
+  width: 1%;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+/* Flash container */
+#flash-image {
+  animation: flashGlow 2s infinite;
+}
+
+/* Media Queries */
+@media screen and (max-width: 1100px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .card {
+    width: 50%;
+  }
+}
+
+/* Keyframes */
+@keyframes wave {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-100rem);
+  }
+}
+
+@keyframes flashGlow {
+  0%,
+  100% {
+    opacity: 1;
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0);
+  }
+  20% {
+    opacity: 1;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 1); /* Red */
+  }
+  40% {
+    opacity: 1;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 1); /* Green */
+  }
+  60% {
+    opacity: 1;
+    box-shadow: 0 0 20px rgba(0, 0, 255, 1); /* Blue */
+  }
+  80% {
+    opacity: 1;
+    box-shadow: 0 0 20px rgba(255, 255, 0, 1); /* Yellow */
+  }
+  100% {
+    opacity: 1;
+    box-shadow: 0 0 20px rgba(128, 0, 128, 1); /* Purple */
+  }
+}
+
 @keyframes spamImages {
   0% {
     opacity: 1;
@@ -152,69 +200,5 @@ body {
   100% {
     opacity: 0;
     transform: translate(0, 0) rotate(360deg);
-  }
-}
-.image-ani-2:hover {
-  animation: spamImages 0.2s infinite;
-}
-
-.text-ani-1:hover {
-  transform: scale(1.3);
-  color: red;
-}
-.text-ani-1 {
-  transition: transform 0.3s ease, color 0.3s ease;
-}
-
-.card-ani-7:hover {
-  opacity: 0;
-}
-
-@media screen and (max-width: 1100px) {
-  .container {
-    flex-direction: column;
-    align-items: center;
-  }
-  .card {
-    width: 80%;
-    height: auto;
-  }
-}
-
-@media screen and (max-width: 800px) {
-  .container {
-    flex-direction: column;
-    align-items: center;
-  }
-  .card {
-    width: 50%;
-    height: auto;
-  }
-}
-
-@keyframes flashGlow {
-  0% {
-    opacity: 1;
-    box-shadow: 0 0 5px rgba(255, 0, 0, 0);
-  }
-  20% {
-    opacity: 1;
-    box-shadow: 0 0 20px rgba(255, 0, 0, 1);
-  }
-  40% {
-    opacity: 1;
-    box-shadow: 0 0 20px rgba(0, 255, 0, 1);
-  }
-  60% {
-    opacity: 1;
-    box-shadow: 0 0 20px rgba(0, 0, 255, 1);
-  }
-  80% {
-    opacity: 1;
-    box-shadow: 0 0 20px rgba(255, 255, 0, 1);
-  }
-  100% {
-    opacity: 1;
-    box-shadow: 0 0 5px rgba(255, 0, 0, 0);
   }
 }
